@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+</head>
+<body>
+<form th:action = "@{/register-process}" th:object = "${register}" method="post"><!--@ thao tac voi url $ thao tac object * thao tac field object-->
+    <label>User name:</label>
+    <input type="text" th:field="*{username}"/>
+    <br/>
+
+    <label>Full name:</label>
+    <input type="text" th:field="*{fullname}"/>
+    <br/>
+
+    <label>Password</label>
+    <input type="text" th:field="*{password}"/>
+    <br/>
+    <input type="submit" value="register"/>
+</form>
+</body>
+</html>
